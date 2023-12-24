@@ -1,0 +1,12 @@
+.boxsd{
+    box-shadow: 0px 4px 8px rgba(116, 119, 119, 0.875);
+}
+.bg-clr{
+    color: coral;
+}
+.bgc-clr{
+    background-color: coral;
+}
+.bg-wrt{
+    color:white;
+}
