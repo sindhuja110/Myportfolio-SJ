@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Contact = () => {
+const Experience = () => {
     return(
         
         <p>
@@ -8,4 +8,4 @@ const Contact = () => {
         </p>
     )
 }
-export default Contact
+export default Experience
