@@ -14,10 +14,12 @@ const BasicButton = (props) => {
     isLoading,
     loaderVariant,
     loaderSize,
+    tcolor,
   } = props;
   const buttonStyle = {
     backgroundColor: color,
     borderColor: color,
+    color:tcolor,
   };
   return (
     <Button
@@ -30,7 +32,7 @@ const BasicButton = (props) => {
     >
       {!isLoading ? (
         <>
-          {icon} {label}
+          {label} {icon} 
         </>
       ) : (
         <>

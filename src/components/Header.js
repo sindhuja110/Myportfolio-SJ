@@ -1,12 +1,12 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { FaUserGraduate } from "react-icons/fa";
-import LanguageDropdown from './Language';
 import Togglebutton from './Togglebutton';
+import LanguageDropdown from './Language';
 
 const Header = () =>{
     return(
-        <Container fluid className=' bgc-clr d-flex flex-row justify-content-between' style={{ position: "sticky", top: "0" ,zIndex:'1000'}}>
+        <Container fluid className=' bgc-clr d-flex flex-row justify-content-between' style={{ position: "fixed", top: "0" ,zIndex:'1000'}}>
             <Row className='d-flex flex-row justify-content-start align-items-center'>
                 <Col  className=' d-flex flex-row align-items-center justify-content-end' >
                 <FaUserGraduate size={30}/>

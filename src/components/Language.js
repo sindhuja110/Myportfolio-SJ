@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Dropdown } from 'react-bootstrap';
 
 const LanguageDropdown = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState('En');
+  const [selectedLanguage, setSelectedLanguage] = useState('Eng');
 
   const handleLanguageSelect = (code, language) => {
     setSelectedLanguage(code);
@@ -12,8 +12,8 @@ const LanguageDropdown = () => {
   };
 
   const languageOptions = [
-    { code: 'En', name: 'En' },
-    { code: 'Ta', name: 'Ta' }
+    { code: 'Eng', name: 'Eng' },
+    { code: 'Tam', name: 'Tam' }
     // Add more language options as needed
   ];
 
