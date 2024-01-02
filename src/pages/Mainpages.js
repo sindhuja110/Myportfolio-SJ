@@ -4,6 +4,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { FaInstagram, FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { MdOutlineMailOutline } from "react-icons/md";
+import mainimage from '../Assets/background1.png';
 
 const MainPages = () => {
   return (
@@ -13,10 +14,11 @@ const MainPages = () => {
     >
       <Row className="d-flex flex-row justify-content-center align-items-center">
         <Col className="text-center">
+          <div><img src={mainimage} alt="no img" style={{width:"50%",height:"50%",borderRadius:"100%" , margin:"40px"}}/></div>
           <div style={{ maxWidth: "600px", margin: "0 auto" }}>
             <h1 className="bg-clr" style={{fontFamily:'serif'}}>Hy!! I'm Sindhuja</h1>
             <p className="text-light">
-              Welcome to my portfolio! I'm a passionate front-end developer with a love for creating engaging and interactive web applications. My skills include HTML, CSS, JavaScript, and React.js.
+               Front-End Developer - Mobile & Web applications.
             </p>
           </div>
           <NavBar />
@@ -33,7 +35,7 @@ const MainPages = () => {
             </a>
             
             {/* Mail icon link */}
-            <a href="mailto:sindhuja1106@gmail.com" target="blank" className="bg-clr ">
+            <a href="https://www.google.com/gmail/about/" target="blank" className="bg-clr ">
               <MdOutlineMailOutline size={35} className="m-3 icon" />
             </a>
           </Col>
