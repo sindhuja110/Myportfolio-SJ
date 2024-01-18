@@ -11,12 +11,11 @@ const About = () => {
       className="d-flex flex-row justify-content-around align-items-center"
     >
       <Row className="d-flex flex-column-reverse flex-md-row justify-content-between align-items-center">
+        
         <Col md={6} className="order-md-1 text-center text-light">
           <div
             style={{ maxWidth: '550px', margin: '10px auto', marginTop: '25px' }}
           >
-            <h3 id="abt" className="bg-clr d-flex justify-content-center align-items-end" style={{ fontFamily: 'serif', marginBottom:"10px" }}>
-              <MdPerson  size={35} style={{marginRight:"10px"}} />     ABOUT ME        </h3>
             <Col style={{ fontSize: '15px', marginTop:"30px" }}>
               <p>
                 Hi there! I'm{' '}
@@ -54,6 +53,9 @@ const About = () => {
             />
           </div>
         </Col>
+        
+      <h3 id="abt" className="bg-clr d-flex justify-content-center align-items-end" style={{ fontFamily: 'serif', marginBottom:"10px" }}>
+              <MdPerson  size={35} style={{marginRight:"10px"}} />     ABOUT ME        </h3>
       </Row>
     </Container>
   );

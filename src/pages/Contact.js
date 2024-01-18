@@ -22,6 +22,7 @@ const ContactMe = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    
     try {
       const templateParams = {
         user_name: formData.name,
@@ -87,7 +88,7 @@ const ContactMe = () => {
           <Form.Label> Name :</Form.Label>
           <Form.Control
             type="text"
-            placeholder='Your Name..'
+            placeholder='Enter your Name..'
             name="name"
             value={formData.name}
             onChange={handleChange}
@@ -99,7 +100,7 @@ const ContactMe = () => {
           <Form.Label>Email :</Form.Label>
           <Form.Control
             type="email"
-            placeholder='Your Email'
+            placeholder='Enter your Email..'
             name="email"
             value={formData.email}
             onChange={handleChange}
@@ -112,7 +113,7 @@ const ContactMe = () => {
           <Form.Label>Message :</Form.Label>
           <Form.Control
             as="textarea"
-            placeholder='Enter Your Message..'
+            placeholder='Enter your Message..'
             rows={4}
             name="message"
             value={formData.message}
