@@ -50,7 +50,7 @@ const ContactMe = () => {
   return (
     <Container fluid className='text-light mt-5'>
       <div className='text-center' style={{marginBottom:"50px"}}>
-        <h1 id='cnt' className='bg-clr mx-2' style={{ fontFamily: 'serif', marginBottom:"10px" }}>Contact Me <MdContacts /></h1>
+        <h3 id='cnt' className='bg-clr mx-2' style={{ fontFamily: 'serif', marginBottom:"10px" }}> <MdContacts style={{marginRight:"10px"}} />Contact Me</h3>
         <p>Feel free to reach out to me using the form below.  I'll get back to you as soon as possible!</p>
       </div>
       <Row className='d-flex flex-row justfy-content-start align-items-center'>
@@ -112,7 +112,7 @@ const ContactMe = () => {
           <Form.Label>Message :</Form.Label>
           <Form.Control
             as="textarea"
-            placeholder=' Enter Your Message..'
+            placeholder='Enter Your Message..'
             rows={4}
             name="message"
             value={formData.message}
@@ -122,13 +122,14 @@ const ContactMe = () => {
         </Form.Group>
 <Col className='text-center'>
         <BasicButton 
-        label="Send Message "
+        label="Send Message"
          icon={<LuSend size={27}/>} 
          color="coral" 
          type="submit" 
          tcolor="black"
          className='mt-4 text-center boxsd'
-         onClick={handleSubmit}
+         onClick={ handleSubmit}
+            
          />
           </Col>
       </Form>

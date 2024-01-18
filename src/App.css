@@ -1,85 +1,65 @@
-.boxsd{
-    box-shadow: 0px 4px 8px rgba(218, 234, 234, 0.875);
-}
+/* MainPages.css */
 
-.boxsd:hover{
+.boxsd {
+    box-shadow: 0px 4px 8px rgba(232, 174, 120, 0.875);
+}
+.boxsd:hover {
     font-weight: bolder;
+    box-shadow: 0px 4px 8px rgba(248, 247, 246, 0.875);
 }
 
-.bg-clr{
+.bg-clr {
     color: coral;
 }
 
-.bgc-clr{
+.bgc-clr {
     background-color: coral;
 }
 
-.bg-wrt{
-    color:white;
+.bg-wrt {
+    color: white;
+}
+.link{
+    list-style-type: none;
+    cursor: pointer;
 }
 
-.link:hover{
-    text-decoration:overline;
+.link:hover {
+    text-decoration: overline;
     font-weight: bold;
     text-shadow: 0px 4px 8px coral;
 }
-/* MainPages.css */
 
 .icon:hover {
     transform: scale(1.2); /* Increase size on hover */
     transition: all 0.3s ease; /* Add smooth transition effect */
-  }
-
-.timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 50px auto;
 }
-
-.timeline-item {
-    position: relative;
-    margin: 50px 0;
+  
+  header {
+    text-align: center;
     padding: 20px;
-    background: #fff;
-    border-radius: 5px;
+  }
+  
+  .skill-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease-in-out;
-}
-
-.timeline-item:hover {
-    transform: scale(1.05);
-}
-
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 12px;
-    height: 12px;
-    background-color: #3498db;
-    border-radius: 50%;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-}
-
-.timeline-date {
-    font-size: 16px;
-    font-weight: bold;
-    color: #3498db;
-}
-
-.timeline-content {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #555;
-}
-
-@media screen and (max-width: 768px) {
-    .timeline-item {
-        width: 80%;
-        margin-left: 10%;
+    transition: transform 0.3s ease-in-out;
+  
+    h2 {
+      margin-bottom: 10px;
     }
-}
+  
+    p {
+      margin: 0;
+    }
+  
+    &:hover {
+      transform: scale(1.05);
+    box-shadow: 0px 6px 8px coral;
 
+    }
+  }
   

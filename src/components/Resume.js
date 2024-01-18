@@ -20,7 +20,7 @@ const DownloadResumeButton = () => {
     <BasicButton onClick={handleDownload}
     color="coral"
     tcolor="black"
-    label=" Download Resume"
+    label="Download Resume"
     className=" boxsd"
     icon={<MdOutlineFileDownload size={30} />}
     />

@@ -1,10 +1,10 @@
 import React from "react";
 import NavBar from "../components/Navbar";
 import { Col, Container, Row } from "react-bootstrap";
-import { FaInstagram, FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa6";
+import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
 import mainimage from '../Assets/background1.png';
+import { Typewriter } from "react-simple-typewriter";
 
 const MainPages = () => {
   return (
@@ -12,33 +12,73 @@ const MainPages = () => {
       fluid
       className="vh-100 d-flex flex-row justify-content-around align-items-center"
     >
-      <Row className="d-flex flex-row justify-content-center align-items-center">
-        <Col className="text-center">
-          <div><img src={mainimage} alt="no img" style={{width:"50%",height:"50%",borderRadius:"100%" , margin:"40px"}}/></div>
-          <div style={{ maxWidth: "600px", margin: "0 auto" }}>
-            <h1 className="bg-clr" style={{fontFamily:'serif'}}>Hy!! I'm Sindhuja</h1>
-            <p className="text-light">
-               Front-End Developer - Mobile & Web applications.
+      <Row className="d-flex flex-column-reverse flex-md-row justify-content-between align-items-center">
+        <Col md={6} className="order-md-1 text-center">
+          <div style={{ maxWidth: "550px", margin: "0 auto" }}>
+            <h1 className="bg-clr" style={{ fontFamily: 'serif' }}>
+              Hy!! I'm Sindhuja
+            </h1>
+            <p className="text-light " style={{fontSize:"17px", fontWeight:"bold", marginTop:'20px'}}>
+              <Typewriter
+                words={['Front-End Developer','App Developer','Web Develeoper','UI/UX Designer']}
+                loop={true}
+                cursor
+                cursorStyle='|'
+                cursorColor="coral"
+                typeSpeed={50}
+                deleteSpeed={35}
+                delaySpeed={1000}
+              />
             </p>
           </div>
           <NavBar />
-          <Col className="bg-clr  ">
+          <Col className="bg-clr mt-5">
             {/* Other social media links */}
-            <a href="https://www.instagram.com/sindhuja_ak?igsh=ODA1NTc5OTg5Nw==" target="blank" className="bg-clr">
+            <a
+              href="https://www.instagram.com/sindhuja_ak?igsh=ODA1NTc5OTg5Nw=="
+              target="blank"
+              className="bg-clr"
+            >
               <FaInstagram size={35} className="m-3 icon" />
             </a>
-            <a href="https://www.linkedin.com/in/sindhuja-ak-a72a49282?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="blank" className="bg-clr">
+            <a
+              href="https://www.linkedin.com/in/sindhuja-ak-a72a49282?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="blank"
+              className="bg-clr"
+            >
               <FaLinkedin size={35} className="m-3 icon" />
             </a>
-            <a href="https://github.com/sindhuja110" target="blank" className="bg-clr ">
+            <a
+              href="https://github.com/sindhuja110"
+              target="blank"
+              className="bg-clr "
+            >
               <FaGithub size={35} className="m-3 icon" />
             </a>
-            
+
             {/* Mail icon link */}
-            <a href="https://www.google.com/gmail/about/" target="blank" className="bg-clr ">
+            <a
+              href="https://www.google.com/gmail/about/"
+              target="blank"
+              className="bg-clr "
+            >
               <MdOutlineMailOutline size={35} className="m-3 icon" />
             </a>
           </Col>
+        </Col>
+        <Col md={6} className="order-md-2 text-center">
+          <div>
+            <img
+              src={mainimage}
+              alt="no img"
+              style={{
+                width: "50%",
+                height: "50%",
+                borderRadius: "100%",
+                margin: "40px",
+              }}
+            />
+          </div>
         </Col>
       </Row>
     </Container>

@@ -1,75 +1,62 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { MdPerson } from 'react-icons/md';
+import DownloadResumeButton from '../components/Resume';
+import mainimage from '../Assets/background1.png';
 
 const About = () => {
-    return(
-        <Container
-        fluid
-        className="d-flex flex-row justify-content-around align-items-center"
-        >
-            <Row className="d-flex flex-column justify-content-center align-items-center">
-        <Col className="text-center text-light">
-          <div style={{ maxWidth: "600px", margin: "10px auto",marginTop:'25px' }}>
-            <h3 className="bg-clr" style={{fontFamily:'serif'}}>ABOUT ME</h3>
-        <Col style={{fontSize:'15px'}}>
-        <p> Hi there! I'm <span className='bg-clr' style={{fontSize:'large'}}>SINDHUJA</span>, a dedicated frontend developer with a passion for creating delightful and
-            interactive web experiences. My expertise includes <span  className='bg-clr' style={{fontWeight:'bold'}}>HTML, CSS, JavaScript</span>
- and I'm always exploring the latest frameworks like <span  className='bg-clr' style={{fontWeight:'bold'}}>React.js</span> to enhance my skills.
-          </p></Col>
-        </div>
-   </Col>
-   <Col className='d-flex flex-row '>
-   <Col className="text-start  text-light" style={{ fontSize:'15px'}}> 
-   </Col>
-   
+  return (
+    <Container
+      fluid
+      className="d-flex flex-row justify-content-around align-items-center"
+    >
+      <Row className="d-flex flex-column-reverse flex-md-row justify-content-between align-items-center">
+        <Col md={6} className="order-md-1 text-center text-light">
+          <div
+            style={{ maxWidth: '550px', margin: '10px auto', marginTop: '25px' }}
+          >
+            <h3 id="abt" className="bg-clr d-flex justify-content-center align-items-end" style={{ fontFamily: 'serif', marginBottom:"10px" }}>
+              <MdPerson  size={35} style={{marginRight:"10px"}} />     ABOUT ME        </h3>
+            <Col style={{ fontSize: '15px', marginTop:"30px" }}>
+              <p>
+                Hi there! I'm{' '}
+                <span className="bg-clr" style={{ fontSize: 'large' }}>
+                  SINDHUJA
+                </span>
+                , a dedicated frontend developer with a passion for creating delightful and interactive web experiences. My expertise includes{' '}
+                <span className="bg-clr" style={{ fontWeight: 'bold' }}>
+                  HTML, CSS, JavaScript
+                </span>{' '}
+                and I'm always exploring the latest frameworks like{' '}
+                <span className="bg-clr" style={{ fontWeight: 'bold' }}>
+                  React.js
+                </span>{' '}
+                to enhance my skills.
+              </p>
+            </Col>
+            <Col className='mt-5'>
+              <DownloadResumeButton/>
+            </Col>
+          </div>
+        </Col>
+        <Col md={6} className="order-md-2 text-center text-light">
+          <div className="d-flex justify-content-center align-items-center">
+            <img
+              src={mainimage}
+              alt="no img"
+              style={{
+                width: "50%",
+                height: "50%",
+                borderRadius: "100%",
+                margin: "40px",
+              }}
+              className="order-1 order-md-2" // Add this class to control order on tablet view
+            />
+          </div>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
 
-<div class="timeline">
-    <div class="timeline-item">
-        <div class="timeline-date">2000-2005</div>
-        <div class="timeline-content">
-            <p>Elementary School</p>
-            <p>Learned the basics of various subjects.</p>
-        </div>
-    </div>
-
-    <div class="timeline-item">
-        <div class="timeline-date">2006-2010</div>
-        <div class="timeline-content">
-            <p>Middle School</p>
-            <p>Explored different subjects and developed foundational skills.</p>
-        </div>
-    </div>
-
-    <div class="timeline-item">
-        <div class="timeline-date">2011-2015</div>
-        <div class="timeline-content">
-            <p>High School</p>
-            <p>Studied advanced subjects and prepared for college.</p>
-        </div>
-    </div>
-
-    <div class="timeline-item">
-        <div class="timeline-date">2016-2020</div>
-        <div class="timeline-content">
-            <p>College</p>
-            <p>Specialized in a specific field of study and gained in-depth knowledge.</p>
-        </div>
-    </div>
-
-    <div class="timeline-item">
-        <div class="timeline-date">2021-2023</div>
-        <div class="timeline-content">
-            <p>Postgraduate Studies</p>
-            <p>Continued education at an advanced level in a specific area.</p>
-        </div>
-    </div>
-</div>
-   </Col>
-   </Row>
-   
-     
-    </Container> 
-    
-    )
-}
-export default About
+export default About;
