@@ -38,7 +38,10 @@ const About = () => {
             </Col>
           </div>
         </Col>
-        <Col md={6} className="order-md-2 text-center text-light">
+        
+      <h3 id="abt" className="bg-clr d-flex justify-content-center align-items-end" style={{ fontFamily: 'serif', marginBottom:"10px" }}>
+              <MdPerson  size={35} style={{marginRight:"10px"}} />     ABOUT ME        </h3>
+              <Col md={6} className="order-md-2 text-center text-light">
           <div className="d-flex justify-content-center align-items-center">
             <img
               src={mainimage}
@@ -49,13 +52,11 @@ const About = () => {
                 borderRadius: "100%",
                 margin: "40px",
               }}
-              className="order-1 order-md-2" // Add this class to control order on tablet view
+              className="order-1 order-md-2 imges" // Add this class to control order on tablet view
             />
           </div>
         </Col>
-        
-      <h3 id="abt" className="bg-clr d-flex justify-content-center align-items-end" style={{ fontFamily: 'serif', marginBottom:"10px" }}>
-              <MdPerson  size={35} style={{marginRight:"10px"}} />     ABOUT ME        </h3>
+     
       </Row>
     </Container>
   );

@@ -18,7 +18,7 @@ const MainPages = () => {
             <h1 className="bg-clr" style={{ fontFamily: 'serif' }}>
               Hy!! I'm Sindhuja
             </h1>
-            <p className="text-light " style={{fontSize:"17px", fontWeight:"bold", marginTop:'20px'}}>
+            <p className="text-light " style={{fontSize:"20px", fontWeight:"bold", marginTop:'20px'}}>
               <Typewriter
                 words={['Front-End Developer','App Developer','Web Develeoper','UI/UX Designer']}
                 loop={true}
@@ -71,6 +71,7 @@ const MainPages = () => {
             <img
               src={mainimage}
               alt="no img"
+              className="imges"
               style={{
                 width: "50%",
                 height: "50%",
