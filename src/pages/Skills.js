@@ -12,8 +12,12 @@ import gitImage from '../Assets/git.png';
 import githImage from '../Assets/github.png';
 import vsImage from '../Assets/vscd.png';
 import pstImage from '../Assets/postman.png';
+import { useTranslation } from 'react-i18next';
 
-const Skills = () => {
+
+const Skills = ({isDarkMode}) => {
+  const { t } = useTranslation();
+
   return (
     <Container fluid className="mt-5">
       <h3
@@ -21,36 +25,36 @@ const Skills = () => {
         className="bg-clr d-flex justify-content-center align-items-end"
         style={{ fontFamily: 'serif', marginBottom: '10px' }}
       >
-        <LiaLaptopCodeSolid size={32} style={{ marginRight: '10px' }} /> SKILLS
+        <LiaLaptopCodeSolid size={32} style={{ marginRight: '10px' }} /> {t("SKILLS" )}
       </h3>
       <Row className="text-light">
         <Col xs={12} className="text-center text-light">
-          <h3>Programming Languages</h3>
-          <h6 className='bg-clr'>I Known</h6>
+          <h3 className={`${isDarkMode ? 'text-Light' : 'text-dark'}`}>{t("Programming Languages" )}</h3>
+          <h6 className='bg-clr'>{t("I Know" )}</h6>
         </Col>
         <Col xs={6} md={4} lg={2}>
-          <SkillsCard title="HTML" imageUrl={htmlImage} borderColor="coral" />
+          <SkillsCard title="HTML" imageUrl={htmlImage} borderColor="coral" isDarkMode={isDarkMode} />
         </Col>
         <Col xs={6} md={4} lg={2}>
-          <SkillsCard title="CSS" imageUrl={cssImage} borderColor="coral" />
+          <SkillsCard title="CSS" imageUrl={cssImage} borderColor="coral" isDarkMode={isDarkMode}/>
         </Col>
         <Col xs={6} md={4} lg={2}>
-          <SkillsCard title="React" imageUrl={btsImage} borderColor="coral" />
+          <SkillsCard title="Bootstrap" imageUrl={btsImage} borderColor="coral" isDarkMode={isDarkMode}/>
         </Col>
         <Col xs={6} md={4} lg={2}>
-          <SkillsCard title="JS" imageUrl={jsImage} borderColor="coral" />
+          <SkillsCard title="JS" imageUrl={jsImage} borderColor="coral"isDarkMode={isDarkMode} />
         </Col>
         <Col xs={6} md={4} lg={2}>
-          <SkillsCard title="React" imageUrl={reactImage} borderColor="coral" />
+          <SkillsCard title="React" imageUrl={reactImage} borderColor="coral" isDarkMode={isDarkMode}/>
         </Col>
         <Col xs={6} md={4} lg={2}>
-          <SkillsCard title="Flutter" imageUrl={fluImage} borderColor="coral" />
+          <SkillsCard title="Flutter" imageUrl={fluImage} borderColor="coral"isDarkMode={isDarkMode} />
         </Col>
       </Row>
       <Row className="text-light justify-content-center">
         <Col xs={12} className="text-center text-light">
-          <h3>Tools</h3>
-          <h6 className='bg-clr'>I use</h6>
+          <h3 className={`${isDarkMode ? 'text-Light' : 'text-dark'}`}>{t("Tools" )}</h3>
+          <h6 className='bg-clr'>{t("I use" )}</h6>
         </Col>
         <Col xs={6} md={4} lg={2}>
           <SkillsCard title="VS Code" imageUrl={vsImage} borderColor="coral" />

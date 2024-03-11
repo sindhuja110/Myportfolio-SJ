@@ -1,8 +1,11 @@
 import React from "react";
 import { Button, Spinner } from "react-bootstrap";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useTranslation } from "react-i18next";
 
 const BasicButton = (props) => {
+  const { t } = useTranslation();
+
   const {
     variant,
     onClick,
@@ -19,7 +22,7 @@ const BasicButton = (props) => {
   const buttonStyle = {
     backgroundColor: color,
     borderColor: color,
-    color:tcolor,
+    color: tcolor,
   };
   return (
     <Button
@@ -32,7 +35,7 @@ const BasicButton = (props) => {
     >
       {!isLoading ? (
         <>
-          {label} {icon} 
+          {t(`${label}`)} {icon}
         </>
       ) : (
         <>

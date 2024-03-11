@@ -5,7 +5,7 @@ import { EventRegister } from "react-native-event-listeners";
 const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState("En");
+  const [language, setLanguage] = useState("Eng");
 
   useEffect(() => {
     const languageListener = EventRegister.addEventListener(

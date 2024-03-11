@@ -2,8 +2,12 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaBookOpenReader } from 'react-icons/fa6';
 import { useSpring, animated } from 'react-spring';
+import { useTranslation } from 'react-i18next';
+
 
   const SkillCard = ({ title, description,name }) => {
+  const { t } = useTranslation();
+
   const animationProps = useSpring({
     from: { opacity: 0, transform: 'scale(0.8)' },
     to: { opacity: 1, transform: 'scale(1)' },
@@ -13,10 +17,10 @@ import { useSpring, animated } from 'react-spring';
   return (
     <Col md={6} lg={4}>
       <animated.div style={animationProps}>
-        <div className="skill-card">
-        <h5>{title}</h5>
-          <h6>{description}</h6>
-          <p>{name}</p>
+        <div className="skill-cards">
+        <h5>{t(`${title}` )}</h5>
+          <h6>{t(`${description}` )}</h6>
+          <p>{t(`${name}` )}</p>
         </div>
       </animated.div>
     </Col>
@@ -24,12 +28,13 @@ import { useSpring, animated } from 'react-spring';
 };
 
 const Education = () => {
+  const { t } = useTranslation();
 
   return (
     <Container fluid >
       <header>
       <h3 id="exp" className="bg-clr d-flex justify-content-center align-items-end" style={{ fontFamily: 'serif', marginBottom: "10px" }}>
-        <FaBookOpenReader size={35} style={{ marginRight: "10px" }} />  EDUCATION 
+        <FaBookOpenReader size={35} style={{ marginRight: "10px" }} />   {t("EDUCATION" )}
       </h3>
       
       </header>
@@ -53,7 +58,7 @@ const Education = () => {
 
         />
         <SkillCard
-          title=" Minerva Higher Secondary School, Kumbakonam"
+          title="Minerva Higher Secondary School, Kumbakonam"
           description="Higher Secondary Certificate"
           name="2017 - 2018"
 

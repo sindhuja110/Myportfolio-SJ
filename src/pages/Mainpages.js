@@ -5,20 +5,23 @@ import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
 import mainimage from '../Assets/background1.png';
 import { Typewriter } from "react-simple-typewriter";
+import { useTranslation } from 'react-i18next';
 
-const MainPages = () => {
+const MainPages = ({ isDarkMode }) => {
+  const { t } = useTranslation();
+
   return (
     <Container
       fluid
-      className="vh-100 d-flex flex-row justify-content-around align-items-center"
+      className={`vh-100 d-flex flex-row justify-content-around align-items-center ${isDarkMode ? 'dark-mode' : ''}`}
     >
       <Row className="d-flex flex-column-reverse flex-md-row justify-content-between align-items-center">
         <Col md={6} className="order-md-1 text-center">
           <div style={{ maxWidth: "550px", margin: "0 auto" }}>
-            <h1 className="bg-clr" style={{ fontFamily: 'serif' }}>
-              Hy!! I'm Sindhuja
-            </h1>
-            <p className="text-light " style={{fontSize:"20px", fontWeight:"bold", marginTop:'20px'}}>
+            <h2 className="bg-clr" style={{ fontFamily: 'serif' }}>
+              {t("Hy!! I'm Sindhuja" )}
+            </h2>
+            <p className={`${isDarkMode ? 'text-dark' : 'text-Light'}`} style={{fontSize:"20px", fontWeight:"bold", marginTop:'20px'}}>
               <Typewriter
                 words={['Front-End Developer','App Developer','Web Develeoper','UI/UX Designer']}
                 loop={true}
@@ -31,7 +34,7 @@ const MainPages = () => {
               />
             </p>
           </div>
-          <NavBar />
+          <NavBar isDarkMode={isDarkMode}/>
           <Col className="bg-clr mt-5">
             {/* Other social media links */}
             <a

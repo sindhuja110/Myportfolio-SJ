@@ -1,6 +1,9 @@
 {
 "Hy I'm Sindhuja":"Hy!! I'm Sindhuja",
-"Front-End Developer - Mobile & Web applications.":"Front-End Developer - Mobile & Web applications.",
+"Front-End Developer":"Front-End Developer",
+"App Developer":"App Developer",
+"Web Develeoper":"Web Develeoper",
+"UI/UX Designer":"UI/UX Designer",
 "About":"About",
 "Education": "Education",
 "Skills":"Skills",
@@ -30,6 +33,12 @@
 "Enter Your Message.." : "Enter Your Message..",
 "Send Message" :"Send Message",
 "Thanks You..!" :"Thanks You..!",
-"Your message has been sent successfully" :"Your message has been sent successfully"
+"Your message has been sent successfully" :"Your message has been sent successfully",
+"Programming Languages":"Programming Languages",
+"I Know":"I Know",
+"Tools":"Tools",
+"I use":"I use"
+
+
 
 }

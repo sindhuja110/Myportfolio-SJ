@@ -1,8 +1,11 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import BasicButton from "./BasicButton";
+import { useTranslation } from "react-i18next";
 
 const NavBar = () => {
+  const { t } = useTranslation();
+
   const scrollToContact = () => {
     const contactSection = document.getElementById("cnt");
     if (contactSection) {
@@ -15,18 +18,17 @@ const NavBar = () => {
       <Row className="d-flex flex-row justify-content-around align-items-center bg-clr">
         <Col className="m-2 link">
           <a href="#abt" style={{ textDecoration: "none", color: "white" }}>
-            About
+            {t("About")}
           </a>
         </Col>
         <Col className="m-2 link">
           <a href="#exp" style={{ textDecoration: "none", color: "white" }}>
-            Education
-            
+            {t("Education")}
           </a>
         </Col>
         <Col className="m-2 link">
           <a href="#skl" style={{ textDecoration: "none", color: "white" }}>
-            Skills
+            {t("Skills")}
           </a>
         </Col>
         <Col className="m-2">

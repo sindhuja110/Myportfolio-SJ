@@ -6,9 +6,13 @@ import { MdEmail } from "react-icons/md";
 import BasicButton from "../components/BasicButton";
 import emailjs from "@emailjs/browser";
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
 
 
-const ContactMe = () => {
+
+const ContactMe = (isDarkMode) => {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -55,7 +59,7 @@ const ContactMe = () => {
   };
 
   return (
-    <Container fluid className="text-light mt-5">
+    <Container fluid className={`mt-5${isDarkMode ? 'text-dark' : 'text-Light'}`} >
       <div className="text-center" style={{ marginBottom: "50px" }}>
         <h3
           id="cnt"
@@ -64,12 +68,11 @@ const ContactMe = () => {
         >
           {" "}
           <MdContacts style={{ marginRight: "10px" }} />
-          Contact Me
+          {t("CONTACT" )}
         </h3>
-        <p>
-          Feel free to reach out to me using the form below. I'll get back to
-          you as soon as possible!
-        </p>
+        <h6 style={{color:isDarkMode? 'text-Light': 'text-dark'}} >
+          {t("Feel free to reach out to me using the form below.  I'll get back to you as soon as possible!" )}
+        </h6>
       </div>
       <Row className="d-flex flex-row justfy-content-start align-items-center">
         <Col className="d-flex flex-column align-items-center justfy-content-center text-center m-3">
@@ -87,7 +90,7 @@ const ContactMe = () => {
           </div>
 
           <address
-            className="mt-3"
+            className={`mt-3${isDarkMode ? 'text-dark' : 'text-Light'}`} 
             style={{
               fontSize: "17px",
               display: "flex",
@@ -97,21 +100,21 @@ const ContactMe = () => {
           >
             <MdLocationOn size={35} style={{ color: "coral" }} />
             <span>
-              27, Mathina Street, Rayanpalaiyam,
+              {t("27, Mathina Street, Rayanpalaiyam," )}
               <br />
-              Karaikal-609609.
+              {t("Karaikal-609609." )}
             </span>
           </address>
 
           <a
             href="https://www.google.com/gmail/about/"
             style={{
-              textDecoration: "none",
-              color: "white",
+
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
               marginTop: "10px",
+              color: isDarkMode? 'text-Light': 'text-dark'
             }}
           >
             <MdEmail size={30} style={{ color: "coral" }} />
@@ -120,11 +123,11 @@ const ContactMe = () => {
         </Col>
         <Col className="m-3">
           <Form onSubmit={handleSubmit}>
-            <Form.Group controlId="name" className="mt-3">
-              <Form.Label> Name :</Form.Label>
+            <Form.Group controlId="name" className={`mt-3${isDarkMode ? 'text-dark' : 'text-Light'}`} >
+              <Form.Label> {t("Name :" )}</Form.Label>
               <Form.Control
           type="text"
-          placeholder="Your Name.."
+          placeholder={t("Your Name.." )}
           name="name"
           value={formData.name}
           onChange={handleChange}
@@ -135,11 +138,11 @@ const ContactMe = () => {
           required
         />
         </Form.Group>
-            <Form.Group controlId="email" className="mt-3">
-              <Form.Label>Email :</Form.Label>
+            <Form.Group controlId="email" className={`mt-3${isDarkMode ? 'text-dark' : 'text-Light'}`} >
+              <Form.Label>{t("Email :" )}</Form.Label>
               <Form.Control
                 type="email"
-                placeholder="Your Email.."
+                placeholder={t("Your Email.." )}
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
@@ -151,11 +154,11 @@ const ContactMe = () => {
               />
             </Form.Group>
 
-            <Form.Group controlId="message" className="mt-3">
-              <Form.Label>Message :</Form.Label>
+            <Form.Group controlId="message" className={`mt-3${isDarkMode ? 'text-dark' : 'text-Light'}`} >
+              <Form.Label>{t("Message :" )}</Form.Label>
               <Form.Control
                 as="textarea"
-                placeholder="Your Message.."
+                placeholder={t("Your Message.." )}
                 rows={4}
                 name="message"
                 value={formData.message}
@@ -195,10 +198,10 @@ const ContactMe = () => {
             }}
           >
             <Toast.Header className="bgc-clr">
-              <strong className="mr-auto">Thanks You..!</strong>
+              <strong className="mr-auto">{t("Thanks You..!" )}</strong>
             </Toast.Header>
             <Toast.Body className="text-light">
-              Your message has been sent successfully
+              {t("Your message has been sent successfully" )}
             </Toast.Body>
           </Toast>
         </Col>
