@@ -20,14 +20,22 @@ const ContactMe = (isDarkMode) => {
   });
 
   const [showToast, setShowToast] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
+     // Hide error message as soon as user starts typing
+     if (errorMessage) {
+      setErrorMessage("");
+    }
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    if (!formData.name && !formData.email && !formData.message) {
+      setErrorMessage("Please fill all mandatory fields.");
+      return null ;
+    }
     try {
       const templateParams = {
         user_name: formData.name,
@@ -170,6 +178,10 @@ const ContactMe = (isDarkMode) => {
                 required
               />
             </Form.Group>
+            {errorMessage && (
+        <div className="text-danger text-center mb-2 mt-3">{errorMessage}</div>
+      )}
+     
             <Col className="text-center">
               <BasicButton
                 label="Send Message"
