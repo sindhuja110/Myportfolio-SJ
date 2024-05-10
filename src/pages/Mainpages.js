@@ -21,7 +21,7 @@ const MainPages = ({ isDarkMode }) => {
             <h2 className="bg-clr" style={{ fontFamily: 'serif' }}>
               {t("Hy!! I'm Sindhuja" )}
             </h2>
-            <p className={`${isDarkMode ? 'text-dark' : 'text-Light'}`} style={{fontSize:"20px", fontWeight:"bold", marginTop:'20px'}}>
+            <p style={{fontSize:"20px", fontWeight:"bold", marginTop:'20px'}}>
               <Typewriter
                 words={['Front-End Developer','App Developer','Web Develeoper','UI/UX Designer']}
                 loop={true}

@@ -1,113 +1,123 @@
-.dark-mode {
-  background-color: rgb(51, 49, 49); /* Dark mode background color */
-  color: #fff; /* Text color for dark mode */
+.dark-theme {
+  background-color: black;
+  color: #fff;
 }
-
+.light-theme {
+  background-color: #f8f9fa;
+  color: black;
+}
 
 /* MainPages.css */
 @keyframes shake {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-8px); }
-  50% { transform: translateX(8px); }
-  75% { transform: translateX(-8px); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-8px);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+  75% {
+    transform: translateX(-8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
-.imges{
-  background-color:coral;
-  transition: border-color 0.3s, transform 0.5s ease-in-out; 
+.imges {
+  background-color: coral;
+  transition: border-color 0.3s, transform 0.5s ease-in-out;
 }
-.images{
+.images {
   border-color: coral;
   transform: scale(1.05);
 }
 .imges:hover {
   transform: scale(1.05);
-  animation: shake 0.5s ease; 
+  animation: shake 0.5s ease;
   box-shadow: 5px 6px 8px coral;
 }
 
 .boxsd {
-    box-shadow: 0px 4px 8px rgba(232, 174, 120, 0.875);
+  box-shadow: 0px 4px 8px rgba(232, 174, 120, 0.875);
 }
 .boxsd:hover {
-    font-weight: bolder;
-    box-shadow: 0px 4px 8px rgba(248, 247, 246, 0.875);
+  font-weight: bolder;
+  box-shadow: 0px 4px 8px rgba(248, 247, 246, 0.875);
 }
 
 .bg-clr {
-    color: coral;
+  color: coral;
 }
 
 .bgc-clr {
-    background-color: coral;
+  background-color: coral;
 }
 
 .bg-wrt {
-    color: white;
+  color: white;
 }
-.link{
-    list-style-type: none;
-    cursor: pointer;
+.link {
+  list-style-type: none;
+  cursor: pointer;
 }
 
 .link:hover {
-    text-decoration: overline;
-    font-weight: bold;
-    text-shadow: 0px 4px 8px coral;
+  text-decoration: overline;
+  font-weight: bold;
+  text-shadow: 0px 4px 8px coral;
 }
 
 .icon:hover {
-    transform: scale(1.2); /* Increase size on hover */
-    transition: all 0.3s ease; /* Add smooth transition effect */
+  transform: scale(1.2); /* Increase size on hover */
+  transition: all 0.3s ease; /* Add smooth transition effect */
 }
-  
-  header {
-    text-align: center;
-    padding: 20px;
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Add additional styles for dark mode elements if needed */
+
+.skill-cards {
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+
+  h2 {
+    margin-bottom: 10px;
   }
 
-  
-  /* Add additional styles for dark mode elements if needed */
-  
-  
-  .skill-cards {
-    background-color: #fff;
-    color: #000;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-  
-    h2 {
-      margin-bottom: 10px;
-    }
-  
-    p {
-      margin: 0;
-    }
-  
-    &:hover {
-      transform: scale(1.05);
+  p {
+    margin: 0;
+  }
+
+  &:hover {
+    transform: scale(1.05);
     box-shadow: 0px 6px 8px coral;
-
-    }
   }
-  
-  /* SkillsCard.css */
+}
+
+/* SkillsCard.css */
 
 .skills-Card {
   border: 3px solid;
   border-radius: 15px;
   padding: 20px;
   margin: 10px;
-  transition: border-color 0.3s, transform 0.5s ease-in-out; 
+  transition: border-color 0.3s, transform 0.5s ease-in-out;
   text-align: center;
 }
 .skills-Card:hover {
   transform: rotate(360deg);
   box-shadow: 0px 6px 8px coral;
-/* Change the border color on hover */
+  /* Change the border color on hover */
 }
 
 .card-image {
@@ -117,22 +127,19 @@
   margin-bottom: 10px;
 }
 
-
 .up-arrow-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color:coral;
-  color:black;
+  background-color: coral;
+  color: black;
   padding: 8px;
   border-radius: 50%;
   cursor: pointer;
   display: none;
-  transition:  0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .up-arrow-button.visible {
   display: block;
 }
-
-

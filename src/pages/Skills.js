@@ -27,33 +27,33 @@ const Skills = ({isDarkMode}) => {
       >
         <LiaLaptopCodeSolid size={32} style={{ marginRight: '10px' }} /> {t("SKILLS" )}
       </h3>
-      <Row className="text-light">
-        <Col xs={12} className="text-center text-light">
-          <h3 className={`${isDarkMode ? 'text-Light' : 'text-dark'}`}>{t("Programming Languages" )}</h3>
+      <Row >
+        <Col xs={12} className="text-center ">
+          <h3 >{t("Programming Languages" )}</h3>
           <h6 className='bg-clr'>{t("I Know" )}</h6>
         </Col>
         <Col xs={6} md={4} lg={2}>
-          <SkillsCard title="HTML" imageUrl={htmlImage} borderColor="coral" isDarkMode={isDarkMode} />
+          <SkillsCard title="HTML" imageUrl={htmlImage} borderColor="coral"  />
         </Col>
         <Col xs={6} md={4} lg={2}>
-          <SkillsCard title="CSS" imageUrl={cssImage} borderColor="coral" isDarkMode={isDarkMode}/>
+          <SkillsCard title="CSS" imageUrl={cssImage} borderColor="coral" />
         </Col>
         <Col xs={6} md={4} lg={2}>
-          <SkillsCard title="Bootstrap" imageUrl={btsImage} borderColor="coral" isDarkMode={isDarkMode}/>
+          <SkillsCard title="Bootstrap" imageUrl={btsImage} borderColor="coral" />
         </Col>
         <Col xs={6} md={4} lg={2}>
-          <SkillsCard title="JS" imageUrl={jsImage} borderColor="coral"isDarkMode={isDarkMode} />
+          <SkillsCard title="JS" imageUrl={jsImage} borderColor="coral" />
         </Col>
         <Col xs={6} md={4} lg={2}>
-          <SkillsCard title="React" imageUrl={reactImage} borderColor="coral" isDarkMode={isDarkMode}/>
+          <SkillsCard title="React" imageUrl={reactImage} borderColor="coral" />
         </Col>
         <Col xs={6} md={4} lg={2}>
-          <SkillsCard title="Flutter" imageUrl={fluImage} borderColor="coral"isDarkMode={isDarkMode} />
+          <SkillsCard title="Flutter" imageUrl={fluImage} borderColor="coral" />
         </Col>
       </Row>
-      <Row className="text-light justify-content-center">
-        <Col xs={12} className="text-center text-light">
-          <h3 className={`${isDarkMode ? 'text-Light' : 'text-dark'}`}>{t("Tools" )}</h3>
+      <Row className=" justify-content-center">
+        <Col xs={12} className="text-center ">
+          <h3 >{t("Tools" )}</h3>
           <h6 className='bg-clr'>{t("I use" )}</h6>
         </Col>
         <Col xs={6} md={4} lg={2}>

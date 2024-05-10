@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import BasicButton from "./BasicButton";
 import { useTranslation } from "react-i18next";
 
-const NavBar = () => {
+const NavBar = (isDarkMode) => {
   const { t } = useTranslation();
 
   const scrollToContact = () => {
@@ -14,20 +14,20 @@ const NavBar = () => {
   };
 
   return (
-    <Container fluid>
+    <Container fluid >
       <Row className="d-flex flex-row justify-content-around align-items-center bg-clr">
         <Col className="m-2 link">
-          <a href="#abt" style={{ textDecoration: "none", color: "white" }}>
+          <a href="#abt" style={{ textDecoration: "none"}} className="bg-clr">
             {t("About")}
           </a>
         </Col>
         <Col className="m-2 link">
-          <a href="#exp" style={{ textDecoration: "none", color: "white" }}>
+          <a href="#exp" style={{ textDecoration: "none" }} className="bg-clr">
             {t("Education")}
           </a>
         </Col>
         <Col className="m-2 link">
-          <a href="#skl" style={{ textDecoration: "none", color: "white" }}>
+          <a href="#skl" style={{ textDecoration: "none" }} className="bg-clr">
             {t("Skills")}
           </a>
         </Col>
