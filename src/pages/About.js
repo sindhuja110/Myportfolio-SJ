@@ -29,12 +29,12 @@ const About = (isDarkMode) => {
                 {t(", a dedicated frontend developer with a passion for creating delightful and interactive web experiences. My expertise includes" )}
                 {' '}
                 <span className="bg-clr" style={{ fontWeight: 'bold' }}>
-                  HTML, CSS, JavaScript
+                  HTML, CSS, JavaScript, React.js
                 </span>{' '}
                 {t("and I'm always exploring the latest frameworks like" )}
                 {' '}
                 <span className="bg-clr" style={{ fontWeight: 'bold' }}>
-                  React.js
+                  Flutter 
                 </span>{' '}
                 {t("to enhance my skills." )}
               </p>
