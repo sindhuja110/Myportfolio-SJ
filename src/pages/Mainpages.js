@@ -3,9 +3,11 @@ import NavBar from "../components/Navbar";
 import { Col, Container, Row } from "react-bootstrap";
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
-import mainimage from '../Assets/background1.png';
 import { Typewriter } from "react-simple-typewriter";
 import { useTranslation } from 'react-i18next';
+import Lottie from "lottie-react";
+import mainimag from '../Assets/dev.json';
+
 
 const MainPages = ({ isDarkMode }) => {
   const { t } = useTranslation();
@@ -71,16 +73,11 @@ const MainPages = ({ isDarkMode }) => {
         </Col>
         <Col md={6} className="order-md-2 text-center">
           <div>
-            <img
-              src={mainimage}
-              alt="no img"
-              className="imges"
-              style={{
-                width: "50%",
-                height: "50%",
-                borderRadius: "100%",
-                margin: "40px",
-              }}
+          <Lottie 
+              animationData={mainimag}
+              style={{ width: '100%', maxWidth: '400px', height: 'auto' }}
+              loop={true}
+              autoplay={true}
             />
           </div>
         </Col>

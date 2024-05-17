@@ -67,7 +67,7 @@ const ContactMe = (isDarkMode) => {
   };
 
   return (
-    <Container fluid className={`mt-5${isDarkMode ? 'text-dark' : 'text-Light'}`} >
+    <Container fluid className='mt-5' >
       <div className="text-center" style={{ marginBottom: "50px" }}>
         <h3
           id="cnt"
@@ -78,7 +78,7 @@ const ContactMe = (isDarkMode) => {
           <MdContacts style={{ marginRight: "10px" }} />
           {t("CONTACT" )}
         </h3>
-        <h6 style={{color:isDarkMode? 'text-Light': 'text-dark'}} >
+        <h6 >
           {t("Feel free to reach out to me using the form below.  I'll get back to you as soon as possible!" )}
         </h6>
       </div>
@@ -98,7 +98,7 @@ const ContactMe = (isDarkMode) => {
           </div>
 
           <address
-            className={`mt-3${isDarkMode ? 'text-dark' : 'text-Light'}`} 
+            className={`mt-3`} 
             style={{
               fontSize: "17px",
               display: "flex",
@@ -108,7 +108,7 @@ const ContactMe = (isDarkMode) => {
           >
             <MdLocationOn size={35} style={{ color: "coral" }} />
             <span>
-              {t("27, Mathina Street, Rayanpalaiyam," )}
+              {t("27, Rayanpalaiyam," )}
               <br />
               {t("Karaikal-609609." )}
             </span>
@@ -179,7 +179,7 @@ const ContactMe = (isDarkMode) => {
               />
             </Form.Group>
             {errorMessage && (
-        <div className="text-danger text-center mb-2 mt-3">{errorMessage}</div>
+        <div className="text-center mb-2 mt-3">{errorMessage}</div>
       )}
      
             <Col className="text-center">

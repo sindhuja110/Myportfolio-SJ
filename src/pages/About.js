@@ -2,8 +2,9 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { MdPerson } from 'react-icons/md';
 import DownloadResumeButton from '../components/Resume';
-import mainimage from '../Assets/background1.png';
+import mainimage from '../Assets/dev.json';
 import { useTranslation } from 'react-i18next';
+import Lottie from 'lottie-react';
 
 
 const About = (isDarkMode) => {
@@ -49,16 +50,11 @@ const About = (isDarkMode) => {
               <MdPerson  size={35} style={{marginRight:"10px"}}/>{t('ABOUT ME')}</h3>
               <Col md={6} className="order-md-2 text-center text-light">
           <div className="d-flex justify-content-center align-items-center">
-            <img
-              src={mainimage}
-              alt="no img"
-              style={{
-                width: "50%",
-                height: "50%",
-                borderRadius: "100%",
-                margin: "40px",
-              }}
-              className="order-1 order-md-2 imges" // Add this class to control order on tablet view
+          <Lottie 
+              animationData={mainimage}
+              style={{ width: '100%', maxWidth: '400px', height: 'auto' }}
+              loop={true}
+              autoplay={true}
             />
           </div>
         </Col>
